@@ -24,11 +24,13 @@ public class HomeActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //TODO prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //prefs.getDefaultSharedPreferences(this);
         player_et = (EditText) findViewById(R.id.home_player_editText);
         start_but = (Button) findViewById(R.id.home_start_but);
 
         start_but.setOnClickListener(this);
+
+        player_et.setText(prefs.getDefaultSharedPreferences(this).getString("player_name", ""));
     }
 
     @Override
@@ -56,6 +58,7 @@ public class HomeActivity extends Activity implements View.OnClickListener{
     public void startClick() {
         i = new Intent(this, Hangman_akt.class);
         i.putExtra("player_name", player_et.getText().toString());
+        prefs.getDefaultSharedPreferences(this).edit().putString("player_name", player_et.getText().toString()).commit();
         this.startActivity(i);
     }
 

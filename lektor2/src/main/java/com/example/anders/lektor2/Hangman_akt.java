@@ -4,13 +4,27 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
-public class Hangman_akt extends Activity {
+public class Hangman_akt extends Activity implements View.OnClickListener {
+
+    Button submit;
+    ImageView hang_pic;
+
+    int wrongs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hangman_akt);
+
+        submit = (Button) findViewById(R.id.game_submit_but);
+        hang_pic = (ImageView) findViewById(R.id.game_hangman_pic);
+        wrongs = 0;
+        submit.setOnClickListener(this);
+
     }
 
     @Override
@@ -33,5 +47,42 @@ public class Hangman_akt extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void oneWrong(){
+        switch (wrongs){
+            case 0:
+                hang_pic.setImageResource(R.drawable.galge);
+                break;
+            case 1:
+                hang_pic.setImageResource(R.drawable.forkert1);
+                break;
+            case 2:
+                hang_pic.setImageResource(R.drawable.forkert2);
+                break;
+            case 3:
+                hang_pic.setImageResource(R.drawable.forkert3);
+                break;
+            case 4:
+                hang_pic.setImageResource(R.drawable.forkert4);
+                break;
+            case 5:
+                hang_pic.setImageResource(R.drawable.forkert5);
+                break;
+            case 6:
+                hang_pic.setImageResource(R.drawable.forkert6);
+                wrongs = 0;
+                break;
+            default:
+                hang_pic.setImageResource(R.drawable.galge);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == submit){
+            wrongs++;
+            oneWrong();
+        }
     }
 }
