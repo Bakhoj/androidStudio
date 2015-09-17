@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 public class HomeActivity extends Activity implements View.OnClickListener{
 
-    SharedPreferences prefs;
+    PreferenceManager prefs;
     Button start_but;
     EditText player_et;
 
@@ -24,7 +24,7 @@ public class HomeActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //TODO prefs = PreferenceManager.getDefaultSharedPreferences(this);
         player_et = (EditText) findViewById(R.id.home_player_editText);
         start_but = (Button) findViewById(R.id.home_start_but);
 
