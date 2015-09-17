@@ -1,0 +1,71 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomeScreen"
+    android:nestedScrollingEnabled="true">
+
+    <TextView android:text="@string/home_screen_text" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/øve1_text"
+        android:id="@+id/øve1_button"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        style="@android:style/ButtonBar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/øve2_text"
+        android:id="@+id/øve2_button"
+        android:layout_below="@+id/øve1_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        style="@android:style/ButtonBar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/øve3_text"
+        android:id="@+id/øve3_button"
+        android:layout_below="@+id/øve2_button"
+        android:singleLine="false"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        style="@android:style/ButtonBar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/øve4_text"
+        android:id="@+id/øve4_button"
+        android:layout_below="@+id/øve3_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        style="@android:style/ButtonBar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/øve5_text"
+        android:id="@+id/øve5_button"
+        android:layout_below="@+id/øve4_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        style="@android:style/ButtonBar"/>
+</RelativeLayout>
+</ScrollView>

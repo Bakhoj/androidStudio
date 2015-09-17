@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Lektor1</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="home_screen_text">Lektor 1 Home Screen</string>
+    <string name="øve1_text">Øvelse 1</string>
+    <string name="øve2_text">Øvelse 2</string>
+    <string name="øve3_text">Øvelse 3</string>
+    <string name="øve4_text">Øvelse 4</string>
+    <string name="øve5_text">Øvelse 5</string>
+    <string name="action_settings">Settings</string>
+
+    //Øvelse1
+    <string name="title_activity_ovelse1">Øvelse1</string>
+    <string name="øve1_akt_text">Programmet er installeret og fungere,\n
+        Tryk "Back" for at komme tilbage til hovedmenu.</string>
+
+    //Øvelse2
+    <string name="title_activity_ovelse2">Øvelse2</string>
+    <string name="øve2_akt_text">Welcome</string>
+    <string name="øve2_but">Submit</string>
+
+    //Øvelse3
+    <string name="title_activity_ovelse3">Øvelse3</string>
+    <string name="øve3_akt_headline">Øvelse3!!</string>
+    <string name="øve3_akt_text">Dit valg</string>
+    <string name="øve3_akt_but_ind">Indstillinger</string>
+    <string name="øve3_akt_but_vej">Vejledning</string>
+
+    //Øvelse4
+    <string name="title_activity_ovelse4">Øvelse4</string>
+    <string name="øve4_akt_text">hej</string>
+
+    //Øvelse5
+    <string name="title_activity_ovelse5">Øvelse5</string>
+    <string name="øve5_akt_text">hej</string>
+
+</resources>
