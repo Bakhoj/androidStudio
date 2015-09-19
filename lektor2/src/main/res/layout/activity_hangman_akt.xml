@@ -7,9 +7,12 @@
     tools:context="com.example.anders.lektor2.Hangman_akt"
     android:background="@drawable/baggrundgalge">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+    <TextView android:text="Welcome " android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="false" />
+        android:id="@+id/hangman_akt_text"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <ImageView
         android:layout_width="wrap_content"

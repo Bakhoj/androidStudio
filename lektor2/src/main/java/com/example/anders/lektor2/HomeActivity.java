@@ -2,7 +2,6 @@ package com.example.anders.lektor2;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -14,8 +13,8 @@ import android.widget.EditText;
 public class HomeActivity extends Activity implements View.OnClickListener{
 
     PreferenceManager prefs;
-    Button start_but;
-    EditText player_et;
+    Button startBut;
+    EditText playerET;
 
     Intent i;
 
@@ -25,12 +24,12 @@ public class HomeActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_home);
 
         //prefs.getDefaultSharedPreferences(this);
-        player_et = (EditText) findViewById(R.id.home_player_editText);
-        start_but = (Button) findViewById(R.id.home_start_but);
+        playerET = (EditText) findViewById(R.id.home_player_editText);
+        startBut = (Button) findViewById(R.id.home_start_but);
 
-        start_but.setOnClickListener(this);
+        startBut.setOnClickListener(this);
 
-        player_et.setText(prefs.getDefaultSharedPreferences(this).getString("player_name", ""));
+        playerET.setText(prefs.getDefaultSharedPreferences(this).getString("player_name", ""));
     }
 
     @Override
@@ -57,16 +56,16 @@ public class HomeActivity extends Activity implements View.OnClickListener{
     }
     public void startClick() {
         i = new Intent(this, Hangman_akt.class);
-        i.putExtra("player_name", player_et.getText().toString());
-        prefs.getDefaultSharedPreferences(this).edit().putString("player_name", player_et.getText().toString()).commit();
+        i.putExtra("player_name", playerET.getText().toString());
+        prefs.getDefaultSharedPreferences(this).edit().putString("player_name", playerET.getText().toString()).commit();
         this.startActivity(i);
     }
 
     @Override
     public void onClick(View v) {
 
-        if(v == start_but) {
-            if(player_et.getText().toString() != null){
+        if(v == startBut) {
+            if(playerET.getText().toString() != null){
                 startClick();
             }
         }
