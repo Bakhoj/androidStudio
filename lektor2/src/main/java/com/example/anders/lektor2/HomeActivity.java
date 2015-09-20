@@ -24,7 +24,7 @@ public class HomeActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_home);
 
         //prefs.getDefaultSharedPreferences(this);
-        playerET = (EditText) findViewById(R.id.home_player_editText);
+        playerET = (EditText) findViewById(R.id.home_player_et);
         startBut = (Button) findViewById(R.id.home_start_but);
 
         startBut.setOnClickListener(this);
@@ -55,7 +55,7 @@ public class HomeActivity extends Activity implements View.OnClickListener{
         return super.onOptionsItemSelected(item);
     }
     public void startClick() {
-        i = new Intent(this, Hangman_akt.class);
+        i = new Intent(this, HangmanAct.class);
         i.putExtra("player_name", playerET.getText().toString());
         prefs.getDefaultSharedPreferences(this).edit().putString("player_name", playerET.getText().toString()).commit();
         this.startActivity(i);

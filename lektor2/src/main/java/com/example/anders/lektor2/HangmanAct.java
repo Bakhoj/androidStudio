@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Hangman_akt extends Activity implements View.OnClickListener {
+public class HangmanAct extends Activity implements View.OnClickListener {
 
     Button submit;
-    ImageView hang_pic;
-    TextView text;
+    ImageView hangPic;
+    TextView guessLetET;
+    TextView usedLetText;
+    TextView visibleWordText;
 
     Intent i;
     Galgelogik gl;
@@ -22,20 +24,22 @@ public class Hangman_akt extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hangman_akt);
+        setContentView(R.layout.activity_hangman);
 
-        text = (TextView) findViewById(R.id.hangman_akt_text);
+        guessLetET = (TextView) findViewById(R.id.game_guess_letter_et);
+        usedLetText = (TextView) findViewById(R.id.game_used_letters_text);
+        visibleWordText = (TextView) findViewById(R.id.game_visible_word);
         submit = (Button) findViewById(R.id.game_submit_but);
-        hang_pic = (ImageView) findViewById(R.id.game_hangman_pic);
+        hangPic = (ImageView) findViewById(R.id.game_hangman_pic);
         submit.setOnClickListener(this);
         i = getIntent();
         gl = new Galgelogik();
 
         String s = i.getExtras().getString("player_name");
 
-        text.setText(text.getText().toString() + s + ". " + gl.getSynligtOrd() + " " + gl.getOrdet());
+        update();
 
-
+        //text.setText(text.getText().toString() + s + ". " + gl.getSynligtOrd() + " " + gl.getOrdet());
     }
 
     @Override
@@ -60,42 +64,46 @@ public class Hangman_akt extends Activity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    private void oneWrong(){
-        switch (gl.getAntalForkerteBogstaver()){
+    private void update() {
+        switch (gl.getAntalForkerteBogstaver()) {
             case 0:
-                hang_pic.setImageResource(R.drawable.galge);
+                hangPic.setImageResource(R.drawable.galge);
                 break;
             case 1:
-                hang_pic.setImageResource(R.drawable.forkert1);
+                hangPic.setImageResource(R.drawable.forkert1);
                 break;
             case 2:
-                hang_pic.setImageResource(R.drawable.forkert2);
+                hangPic.setImageResource(R.drawable.forkert2);
                 break;
             case 3:
-                hang_pic.setImageResource(R.drawable.forkert3);
+                hangPic.setImageResource(R.drawable.forkert3);
                 break;
             case 4:
-                hang_pic.setImageResource(R.drawable.forkert4);
+                hangPic.setImageResource(R.drawable.forkert4);
                 break;
             case 5:
-                hang_pic.setImageResource(R.drawable.forkert5);
+                hangPic.setImageResource(R.drawable.forkert5);
                 break;
             case 6:
-                hang_pic.setImageResource(R.drawable.forkert6);
+                hangPic.setImageResource(R.drawable.forkert6);
                 break;
             default:
-                hang_pic.setImageResource(R.drawable.galge);
+                hangPic.setImageResource(R.drawable.galge);
         }
+
+        visibleWordText.setText(gl.getSynligtOrd());
+        guessLetET.setText("");
+        usedLetText.setText(gl.getBrugteBogstaver().toString());
     }
 
     @Override
     public void onClick(View v) {
-        if (v == submit){
-            gl.gætBogstav("a");
-
-            if(gl.erSidsteBogstavKorrekt()){
-
-            } else {oneWrong();}
+        if (v == submit) {
+            gl.gætBogstav(guessLetET.getText().toString());
+            guessLetET.setText("");
+            if(!gl.erSpilletSlut()){
+                update();
+            }
 
         }
     }

@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/enterName"
         style="@style/CodeFont"
-        android:id="@+id/home_player_editText"
+        android:id="@+id/home_player_et"
         android:textSize="20dp"
         android:layout_below="@+id/home_player_text"
         android:layout_centerHorizontal="true"
@@ -41,8 +41,9 @@
         android:layout_height="wrap_content"
         android:text="@string/start_but"
         android:id="@+id/home_start_but"
-        android:layout_below="@+id/home_player_editText"
+        android:layout_below="@+id/home_player_et"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        style="@style/CodeFont"/>
 
 </RelativeLayout>

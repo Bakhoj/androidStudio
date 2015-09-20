@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Hangman_akt"
+            android:name=".HangmanAct"
             android:label="@string/title_activity_hangman_akt" >
         </activity>
         <activity
-            android:name=".HighScore_akt"
+            android:name=".HighScoreAct"
             android:label="@string/title_activity_highscore_akt" >
         </activity>
     </application>
