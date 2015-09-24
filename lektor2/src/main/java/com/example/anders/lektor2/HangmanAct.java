@@ -15,9 +15,7 @@ public class HangmanAct extends Activity implements View.OnClickListener {
 
     Button submit;
     ImageView hangPic;
-    TextView guessLetET;
-    TextView usedLetText;
-    TextView visibleWordText;
+    TextView guessLetET, usedLetText, visibleWordText;
     RelativeLayout bag;
 
     Intent i;
@@ -79,21 +77,27 @@ public class HangmanAct extends Activity implements View.OnClickListener {
                 break;
             case 2:
                 hangPic.setImageResource(R.drawable.forkert2);
+                bag.setBackgroundResource(R.drawable.forkert2);
                 break;
             case 3:
                 hangPic.setImageResource(R.drawable.forkert3);
+                bag.setBackgroundResource(R.drawable.forkert3);
                 break;
             case 4:
                 hangPic.setImageResource(R.drawable.forkert4);
+                bag.setBackgroundResource(R.drawable.forkert4);
                 break;
             case 5:
                 hangPic.setImageResource(R.drawable.forkert5);
+                bag.setBackgroundResource(R.drawable.forkert5);
                 break;
             case 6:
                 hangPic.setImageResource(R.drawable.forkert6);
+                bag.setBackgroundResource(R.drawable.forkert6);
                 break;
             default:
                 hangPic.setImageResource(R.drawable.galge);
+                bag.setBackgroundResource(R.drawable.baggrundgalge);
         }
 
         visibleWordText.setText(gl.getSynligtOrd());
