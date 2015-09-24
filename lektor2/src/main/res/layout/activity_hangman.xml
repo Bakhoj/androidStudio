@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:id="@+id/baggrund_hangman"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -13,7 +14,7 @@
         android:id="@+id/game_visible_word"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:hint="THE VISIBLE WORD"
         style="@style/CodeFont" />
 
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/game_hangman_pic"
         android:src="@drawable/galge"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp" />
@@ -31,33 +33,38 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/game_submit_but"
-        android:layout_marginEnd="28dp"
-        android:layout_above="@+id/game_hangman_pic"
-        android:layout_alignParentEnd="true"
-        style="@style/CodeFont"/>
+        style="@style/CodeFont"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignBottom="@+id/game_guess_letter_et"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@+id/game_guess_letter_et" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/game_guess_letter_et"
         android:textSize="20dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:editable="true"
         android:singleLine="true"
         android:hint="Letter"
-        style="@style/CodeFont"/>
+        style="@style/CodeFont"
+        android:layout_below="@+id/game_used_letters_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guess letter:"
+        android:text="Guess:"
         android:id="@+id/game_guess_letter_text"
         android:textSize="20dp"
         android:singleLine="true"
         style="@style/CodeFont"
-        android:layout_alignTop="@+id/game_guess_letter_et"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/game_guess_letter_et"
+        android:layout_alignParentLeft="false"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@+id/game_guess_letter_et" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,7 +74,7 @@
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/game_visible_word"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Used letters" />
 
 </RelativeLayout>

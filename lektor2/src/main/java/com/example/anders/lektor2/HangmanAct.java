@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class HangmanAct extends Activity implements View.OnClickListener {
@@ -17,6 +18,7 @@ public class HangmanAct extends Activity implements View.OnClickListener {
     TextView guessLetET;
     TextView usedLetText;
     TextView visibleWordText;
+    RelativeLayout bag;
 
     Intent i;
     Galgelogik gl;
@@ -31,6 +33,7 @@ public class HangmanAct extends Activity implements View.OnClickListener {
         visibleWordText = (TextView) findViewById(R.id.game_visible_word);
         submit = (Button) findViewById(R.id.game_submit_but);
         hangPic = (ImageView) findViewById(R.id.game_hangman_pic);
+        bag = (RelativeLayout) findViewById(R.id.baggrund_hangman);
         submit.setOnClickListener(this);
         i = getIntent();
         gl = new Galgelogik();
@@ -68,9 +71,11 @@ public class HangmanAct extends Activity implements View.OnClickListener {
         switch (gl.getAntalForkerteBogstaver()) {
             case 0:
                 hangPic.setImageResource(R.drawable.galge);
+                bag.setBackgroundResource(R.drawable.baggrundgalge);
                 break;
             case 1:
                 hangPic.setImageResource(R.drawable.forkert1);
+                bag.setBackgroundResource(R.drawable.bagforkert1);
                 break;
             case 2:
                 hangPic.setImageResource(R.drawable.forkert2);

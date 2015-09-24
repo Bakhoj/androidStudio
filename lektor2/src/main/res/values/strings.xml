@@ -14,5 +14,6 @@
 
     /* Hangman Game*/
     <string name="title_activity_highscore_akt">highscore_akt</string>
+    <string name="title_activity_new">newActivity</string>
 
 </resources>
