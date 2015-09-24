@@ -40,6 +40,13 @@ public class HangmanAct extends Activity implements View.OnClickListener {
 
         update();
 
+        if (savedInstanceState == null) {
+            HighScoreFrag fragment = new HighScoreFrag();
+            getFragmentManager().beginTransaction()
+                    .add(R.id.frag, fragment)
+                    .commit();
+        }
+
         //text.setText(text.getText().toString() + s + ". " + gl.getSynligtOrd() + " " + gl.getOrdet());
     }
 
