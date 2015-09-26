@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class HighScoreAct extends Activity {
+public class HighScore_act extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,9 +7,11 @@
     <string name="title_activity_hangman_akt">Hangman_akt</string>
 
     /* ENGLISH*/
-    /* Welcomescreen*/    <string name="welcome">Welcome to Hangman</string>
+    /* Welcomescreen*/
+    <string name="welcome">Welcome to Hangman</string>
     <string name="player">Player name:</string>
     <string name="enterName">Player</string>
+    <string name="highScore">High-Score</string>
     <string name="start_but">START</string>
 
     /* Hangman Game*/

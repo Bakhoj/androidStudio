@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class HomeActivity extends Activity implements View.OnClickListener{
+public class HomeScreen_act extends Activity implements View.OnClickListener{
 
     PreferenceManager prefs;
-    Button startBut;
+    Button startBut, highScoreBut;
     EditText playerET;
 
     Intent i;
@@ -21,11 +21,12 @@ public class HomeActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_homescreen);
 
         //prefs.getDefaultSharedPreferences(this);
         playerET = (EditText) findViewById(R.id.home_player_et);
         startBut = (Button) findViewById(R.id.home_start_but);
+        highScoreBut = (Button) findViewById(R.id.home_high_score_but);
 
         startBut.setOnClickListener(this);
 
@@ -55,7 +56,7 @@ public class HomeActivity extends Activity implements View.OnClickListener{
         return super.onOptionsItemSelected(item);
     }
     public void startClick() {
-        i = new Intent(this, HangmanAct.class);
+        i = new Intent(this, Hangman_act.class);
         i.putExtra("player_name", playerET.getText().toString());
         prefs.getDefaultSharedPreferences(this).edit().putString("player_name", playerET.getText().toString()).commit();
         this.startActivity(i);
@@ -69,5 +70,11 @@ public class HomeActivity extends Activity implements View.OnClickListener{
                 startClick();
             }
         }
+        else
+        if(v == highScoreBut){
+
+        }
+
+
     }
 }

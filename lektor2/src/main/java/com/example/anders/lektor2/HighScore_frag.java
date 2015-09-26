@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link HighScoreFrag.OnFragmentInteractionListener} interface
+ * {@link HighScore_frag.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link HighScoreFrag#newInstance} factory method to
+ * Use the {@link HighScore_frag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HighScoreFrag extends Fragment {
+public class HighScore_frag extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,11 +35,11 @@ public class HighScoreFrag extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HighScoreFrag.
+     * @return A new instance of fragment HighScore_frag.
      */
     // TODO: Rename and change types and number of parameters
-    public static HighScoreFrag newInstance(String param1, String param2) {
-        HighScoreFrag fragment = new HighScoreFrag();
+    public static HighScore_frag newInstance(String param1, String param2) {
+        HighScore_frag fragment = new HighScore_frag();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +47,7 @@ public class HighScoreFrag extends Fragment {
         return fragment;
     }
 
-    public HighScoreFrag() {
+    public HighScore_frag() {
         // Required empty public constructor
     }
 

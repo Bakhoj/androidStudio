@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class HangmanAct extends Activity implements View.OnClickListener {
+public class Hangman_act extends Activity implements View.OnClickListener {
 
     Button submit;
     ImageView hangPic;
@@ -40,12 +40,12 @@ public class HangmanAct extends Activity implements View.OnClickListener {
 
         update();
 
-        if (savedInstanceState == null) {
-            HighScoreFrag fragment = new HighScoreFrag();
+       /* if (savedInstanceState == null) {
+            HighScore_frag fragment = new HighScore_frag();
             getFragmentManager().beginTransaction()
                     .add(R.id.frag, fragment)
                     .commit();
-        }
+        } */
 
         //text.setText(text.getText().toString() + s + ". " + gl.getSynligtOrd() + " " + gl.getOrdet());
     }

@@ -44,6 +44,18 @@
         android:layout_below="@+id/home_player_et"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        style="@style/CodeFont"/>
+        style="@style/CodeFont"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highScore"
+        android:id="@+id/home_high_score_but"
+        android:layout_below="@+id/home_start_but"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        style="@style/CodeFont"
+        android:textSize="20dp" />
 
 </RelativeLayout>

@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".HomeActivity"
+            android:name=".HomeScreen_act"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HangmanAct"
+            android:name=".Hangman_act"
             android:label="@string/title_activity_hangman_akt" >
         </activity>
         <activity
-            android:name=".HighScoreAct"
+            android:name=".HighScore_act"
             android:label="@string/title_activity_highscore_akt" >
         </activity>
     </application>
