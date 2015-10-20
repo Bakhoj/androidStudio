@@ -4,8 +4,8 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView android:layout_width="match_parent" android:layout_height="250dp"
-        android:layout_gravity="bottom|center"
-        android:text="hey boyz"
-        android:textSize="20dp" />
+        android:text="Fragment thing"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal|bottom" />
 
 </FrameLayout>

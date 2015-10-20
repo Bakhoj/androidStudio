@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.nfc.NfcAdapter;
 
 public class HomeScreen_act extends Activity implements View.OnClickListener{
 
